@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 import { AUTH_URLS } from '../data/kairoSpec';
 
 export default function CtaBanner() {
@@ -35,7 +35,7 @@ export default function CtaBanner() {
               >
                 <span>Start Building Free</span>
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </div>
               </a>
             </div>

@@ -25,9 +25,6 @@ export default function CoreFeaturesSection() {
 
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block mb-3">
-          Core Engine Capabilities
-        </span>
         <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
           Engineered for Visual Speed & Absolute Reliability
         </h2>

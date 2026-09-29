@@ -104,13 +104,13 @@ export default function Footer({ onOpenDocs }: FooterProps) {
         </div>
 
         {/* Bottom copyright line without 'All Systems Operational' and without 'AES-256 Vault Certified' */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-6 gap-3 text-xs font-mono text-slate-500">
+        <div className="flex items-center justify-start pt-6 gap-3 text-xs font-mono text-slate-500 text-right">
           <span>{KAIRO_SPEC.footer.copyright}</span>
         </div>
       </div>
 
       {/* Giant cyber-technical outline watermark moved further down */}
-      <div className="absolute -bottom-10 sm:-bottom-16 inset-x-0 overflow-hidden select-none pointer-events-none text-center opacity-10">
+      <div className="absolute left-200 -bottom-15 sm:-bottom-16 inset-x-0 overflow-hidden select-none pointer-events-none text-center opacity-10">
         <span className="font-display font-extrabold text-[16vw] tracking-tighter text-white block leading-none">
           KAIRO
         </span>

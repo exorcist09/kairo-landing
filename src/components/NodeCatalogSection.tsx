@@ -63,9 +63,6 @@ export default function NodeCatalogSection() {
 
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-10">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block mb-3">
-          Node Ecosystem
-        </span>
         <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.nodeCatalog.sectionTitle}
         </h2>

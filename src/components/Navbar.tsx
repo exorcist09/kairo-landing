@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { KAIRO_SPEC, AUTH_URLS } from '../data/kairoSpec';
 
 interface NavbarProps {
@@ -36,13 +36,13 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pt-3 sm:pt-4 pointer-events-none">
+    <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
       <nav
         aria-label="Main Navigation"
-        className={`pointer-events-auto w-full max-w-6xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-full ${
+        className={`pointer-events-auto w-full max-w-6xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-2xl rounded-t-none border-x border-b border-t-0 ${
           isScrolled
-            ? 'bg-[#0b0f19]/85 backdrop-blur-xl border border-white/10 shadow-[0_16px_32px_-10px_rgba(0,0,0,0.8)] py-2.5 px-4 sm:px-5'
-            : 'bg-[#0f172a]/60 backdrop-blur-md border border-white/8 py-3 px-4 sm:px-6'
+            ? 'bg-[#0b0f19]/90 backdrop-blur-xl border-white/10 shadow-[0_16px_32px_-10px_rgba(0,0,0,0.8)] py-2.5 px-4 sm:px-5'
+            : 'bg-[#0f172a]/70 backdrop-blur-md border-white/8 py-3 px-4 sm:px-6'
         }`}
       >
         <div className="flex items-center justify-between">
@@ -94,8 +94,8 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
               className="group relative inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-[0_0_20px_-3px_rgba(37,99,235,0.5)] hover:shadow-[0_0_25px_-1px_rgba(37,99,235,0.7)] transition-all duration-300 active:scale-[0.98]"
             >
               <span>Start Free</span>
-              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <ArrowUpRight className="w-3.5 h-3.5" />
+              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </a>
           </div>
@@ -154,7 +154,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
                 className="w-full flex items-center justify-center gap-2 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-blue-600/30 transition-all"
               >
                 <span>Start Free</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>

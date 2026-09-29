@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Sparkles, ArrowUpRight, Sliders, Gift } from 'lucide-react';
+import { Check, Sparkles, ArrowRight, Sliders, Gift } from 'lucide-react';
 import { KAIRO_SPEC, AUTH_URLS } from '../data/kairoSpec';
 
 export default function PricingSection() {
@@ -19,9 +19,6 @@ export default function PricingSection() {
 
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block mb-3">
-          Transparent Pay-As-You-Go
-        </span>
         <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.pricingSection.title}
         </h2>
@@ -52,7 +49,7 @@ export default function PricingSection() {
             className="group inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-lg shadow-emerald-500/20 transition-all whitespace-nowrap active:scale-[0.98]"
           >
             <span>{freePlan.ctaText}</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
       </div>
@@ -123,7 +120,7 @@ export default function PricingSection() {
                 }`}
               >
                 <span>{plan.ctaText}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>
           </div>
@@ -183,7 +180,7 @@ export default function PricingSection() {
                 className="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 transition-all active:scale-[0.98]"
               >
                 <span>Configure & Buy Credits</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>
           </div>

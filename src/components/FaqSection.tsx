@@ -13,11 +13,8 @@ export default function FaqSection() {
     <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-4xl mx-auto relative">
       {/* Header */}
       <div className="text-center mb-12">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block mb-3">
-          Frequently Asked Questions
-        </span>
         <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
-          Everything You Need to Know
+          Frequently Asked Questions
         </h2>
         <p className="text-slate-400 text-xs sm:text-sm mt-3 font-normal">
           Clear answers about architecture, security, credits, and execution guarantees.

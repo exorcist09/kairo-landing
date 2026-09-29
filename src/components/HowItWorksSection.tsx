@@ -12,9 +12,6 @@ export default function HowItWorksSection() {
 
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full inline-block mb-4">
-          Lifecycle & Flow
-        </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
           How Kairo Powers Autonomous Pipelines
         </h2>

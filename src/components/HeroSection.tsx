@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Sparkles,
-  ArrowUpRight,
+  ArrowRight,
   Play,
   CheckCircle2,
   Webhook,
@@ -17,7 +17,7 @@ export default function HeroSection() {
     {
       id: "node-1",
       type: "WEBHOOK",
-      label: "Stripe Webhook",
+      label: "Webhook",
       desc: "invoice.payment_succeeded",
       status: "200 OK",
       cost: "1 credit",
@@ -28,7 +28,7 @@ export default function HeroSection() {
     {
       id: "node-2",
       type: "OPENAI",
-      label: "GPT-4 Reasoning",
+      label: "AI Reasoning",
       desc: "Analyze customer sentiment",
       status: "Analyzed",
       cost: "3 credits",
@@ -39,7 +39,7 @@ export default function HeroSection() {
     {
       id: "node-3",
       type: "POSTGRES",
-      label: "PostgreSQL Insert",
+      label: "Database Insert",
       desc: "UPSERT INTO subscriptions",
       status: "Committed",
       cost: "2 credits",
@@ -50,7 +50,7 @@ export default function HeroSection() {
     {
       id: "node-4",
       type: "SLACK",
-      label: "Slack Alert",
+      label: "Inbox Alert",
       desc: "POST #sales-wins notification",
       status: "Delivered",
       cost: "1 credit",
@@ -96,7 +96,7 @@ export default function HeroSection() {
         >
           <span>{KAIRO_SPEC.heroSection.ctaGroup.primary.text}</span>
           <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" />
           </div>
         </a>
 
