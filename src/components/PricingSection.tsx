@@ -15,8 +15,8 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative">
       {/* Header without subheading */}
-      <div className="text-center max-w-2xl mx-auto mb-12">
-        <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.pricingSection.title}
         </h2>
       </div>

@@ -59,8 +59,8 @@ export default function NodeCatalogSection() {
   return (
     <section id="integrations" className="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto relative">
       {/* Header without subheading */}
-      <div className="text-center max-w-2xl mx-auto mb-10">
-        <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight leading-tight">
+      <div className="text-center max-w-3xl mx-auto mb-10">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.nodeCatalog.sectionTitle}
         </h2>
       </div>

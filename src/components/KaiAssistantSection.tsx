@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { 
   Sparkles, 
   CheckCircle2, 
-  Bot 
+  Bot, 
+  UserIcon
 } from 'lucide-react';
 import { KAIRO_SPEC } from '../data/kairoSpec';
 
@@ -56,8 +57,7 @@ export default function KaiAssistantSection() {
                     }`}
                   >
                     <div className="flex items-center gap-2 font-mono text-[10px] text-zinc-400 mb-1">
-                      <Bot className="w-3.5 h-3.5 text-zinc-400" />
-                      <span>PROMPT PRESET 0{idx + 1}</span>
+                      <UserIcon className="w-3.5 h-3.5 text-zinc-400" />
                     </div>
                     "{sample.prompt}"
                   </button>
@@ -72,7 +72,7 @@ export default function KaiAssistantSection() {
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-zinc-400 animate-pulse" />
                 <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-                  Kai Neural Synthesis Engine
+                  Kai
                 </span>
               </div>
               <span className="text-[11px] font-mono text-zinc-400">
