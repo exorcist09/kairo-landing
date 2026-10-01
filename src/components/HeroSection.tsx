@@ -63,14 +63,20 @@ export default function HeroSection() {
   // Auto-running continuous simulation loop without any button
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % nodes.length);
+      setActiveStep((prev) => (prev + 1) % (nodes.length + 1));
     }, 1400);
 
     return () => clearInterval(interval);
   }, [nodes.length]);
 
   return (
-    <section className="relative pt-44 pb-28 sm:pt-52 sm:pb-36 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center mt-20">
+    <section className="relative isolate pt-44 pb-28 sm:pt-52 sm:pb-36 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center mt-20">
+      {/* Background Dots with smooth fading effect toward the editor */}
+      <div
+        className="hero-dot-pattern pointer-events-none absolute -top-44 left-1/2 -translate-x-1/2 w-screen h-[1150px] -z-10"
+        aria-hidden="true"
+      />
+
       {/* Main Headline without gradient */}
       <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white max-w-4xl leading-[1.08] mb-8">
         Build Complex Workflows with Visual Precision & AI
@@ -81,7 +87,7 @@ export default function HeroSection() {
         <a
           id="hero-primary-cta"
           href={AUTH_URLS.signUp}
-          className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 px-6 py-3  bg-blue-600 hover:bg-blue-500border border-white/10 hover:border-zinc-500 text-white font-semibold text-sm transition-all duration-300 active:scale-[0.98] rounded-sm"
+          className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-500 border border-white/10 hover:border-zinc-500 text-white font-semibold text-sm transition-all duration-300 active:scale-[0.98] rounded-sm"
         >
           <span>{KAIRO_SPEC.heroSection.ctaGroup.primary.text}</span>
           <ArrowRight className="w-4 h-4 text-white group-hover:text-white transition-all group-hover:translate-x-1" />
@@ -151,11 +157,23 @@ export default function HeroSection() {
                     </p>
 
                     <div className="flex items-center justify-between pt-2 border-t border-white/5 text-[10px] font-mono">
-                      <span className="inline-flex items-center gap-1 text-emerald-400">
-                        <CheckCircle2 className="w-3 h-3" />
-                        {node.status}
-                      </span>
-                      <span className="text-zinc-400">{node.latency}</span>
+                      {isNodePast ? (
+                        <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold transition-all duration-300">
+                          <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                          <span>{node.status}</span>
+                        </span>
+                      ) : isNodeActive ? (
+                        <span className="inline-flex items-center gap-1.5 text-zinc-200 font-medium transition-all duration-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                          <span>Running...</span>
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-zinc-600 transition-all duration-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                          <span>{node.status}</span>
+                        </span>
+                      )}
+                      <span className={isNodePast ? "text-zinc-400" : "text-zinc-600"}>{node.latency}</span>
                     </div>
                   </div>
 
