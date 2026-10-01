@@ -30,13 +30,13 @@ export default function KaiAssistantSection() {
     <section id="kai-ai" className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative">
       {/* Header without subheading */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.kaiAssistantSpotlight.title}
         </h2>
       </div>
 
       {/* Interactive Prompt-to-Workflow Simulator (Clean Single-Card Container) */}
-      <div className="rounded-2xl border border-white/10 bg-[#18181c] p-6 sm:p-8 lg:p-10 mb-10">
+      <div className="rounded-lg border border-white/10 bg-[#18181c] p-6 sm:p-8 lg:p-10 mb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left side: Prompt input & presets */}
           <div className="lg:col-span-5 space-y-6">
@@ -50,7 +50,7 @@ export default function KaiAssistantSection() {
                     key={idx}
                     type="button"
                     onClick={() => handleSelectSample(idx)}
-                    className={`w-full text-left p-3.5 rounded-xl border text-xs leading-relaxed transition-all cursor-pointer ${
+                    className={`w-full text-left p-3.5 rounded-lg border text-xs leading-relaxed transition-all cursor-pointer ${
                       selectedPromptIndex === idx
                         ? 'border-zinc-500 bg-[#222226] text-white shadow-sm'
                         : 'border-white/5 bg-[#141416] text-zinc-400 hover:text-zinc-200 hover:border-white/10'
@@ -67,7 +67,7 @@ export default function KaiAssistantSection() {
           </div>
 
           {/* Right side: Live Synthesized DAG & Reasoning Terminal */}
-          <div className="mt-8 lg:col-span-7 bg-[#141416] border border-white/10 rounded-2xl p-5 sm:p-6 space-y-6">
+          <div className="mt-8 lg:col-span-7 bg-[#141416] border border-white/10 rounded-lg p-5 sm:p-6 space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-zinc-400 animate-pulse" />
@@ -81,7 +81,7 @@ export default function KaiAssistantSection() {
             </div>
 
             {/* Synthesis Status / Outcome */}
-            <div className="p-4 rounded-xl bg-[#1c1c20] border border-white/10">
+            <div className="p-4 rounded-lg bg-[#1c1c20] border border-white/10">
               <span className="text-[10px] font-mono text-zinc-400 font-bold uppercase tracking-wider block mb-1">
                 Generated Architecture
               </span>
@@ -99,7 +99,7 @@ export default function KaiAssistantSection() {
                 {activeOutput.nodes.map((nodeName, idx) => (
                   <div
                     key={idx}
-                    className={`p-3 rounded-xl border text-center transition-all ${
+                    className={`p-3 rounded-lg border text-center transition-all ${
                       isGenerating
                         ? 'border-white/5 bg-[#18181c]/50 opacity-50'
                         : 'border-white/10 bg-[#18181c] shadow-sm'
@@ -122,12 +122,12 @@ export default function KaiAssistantSection() {
         </div>
       </div>
 
-      {/* Assistant Capabilities Cards without background on icons and no double-bezel */}
+      {/* Assistant Capabilities Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {KAIRO_SPEC.kaiAssistantSpotlight.assistantCapabilities.map((cap, idx) => (
           <div
             key={idx}
-            className="rounded-2xl border border-white/10 bg-[#18181c] hover:border-white/20 transition-all p-6 h-full flex flex-col justify-between group"
+            className="rounded-lg border border-white/10 bg-[#18181c] hover:border-white/20 transition-all p-6 h-full flex flex-col justify-between group"
           >
             <div>
               <Sparkles className="w-5 h-5 text-zinc-400 mb-4" />

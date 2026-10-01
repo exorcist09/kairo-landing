@@ -9,19 +9,19 @@ export default function HowItWorksSection() {
     <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative">
       {/* Header without subheading */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white tracking-tight leading-tight">
           How Kairo Powers Autonomous Pipelines
         </h2>
       </div>
 
-      {/* 4 Steps Grid with corrected clean cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      {/* Seamless Continuous Cross-Section Grid without gaps */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-white/10 bg-[#18181c] relative">
         {KAIRO_SPEC.howItWorks.map((step, idx) => {
           const Icon = stepIcons[idx % stepIcons.length];
           return (
             <div
               key={step.step}
-              className="rounded-2xl border border-white/10 bg-[#18181c] p-6 sm:p-7 flex flex-col justify-between h-full hover:border-white/20 transition-all duration-300 group"
+              className="border-r border-b border-white/10 p-6 sm:p-7 flex flex-col justify-between h-full hover:bg-[#202026] transition-colors group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">

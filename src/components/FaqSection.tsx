@@ -14,7 +14,7 @@ export default function FaqSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
         {/* Left Column: Heading without subheading */}
         <div className="lg:col-span-4 lg:sticky lg:top-28">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white tracking-tight leading-tight">
             Frequently Asked Questions
           </h2>
         </div>

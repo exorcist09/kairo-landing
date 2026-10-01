@@ -10,7 +10,7 @@ export default function CoreFeaturesSection() {
     >
       {/* Header without subheading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white tracking-tight leading-tight">
           Engineered for Visual Speed & Absolute Reliability
         </h2>
       </div>

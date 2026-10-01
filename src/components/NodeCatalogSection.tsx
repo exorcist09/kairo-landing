@@ -58,17 +58,17 @@ export default function NodeCatalogSection() {
 
   return (
     <section id="integrations" className="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto relative">
-      {/* Header without subheading */}
+      {/* Header without subheading, reduced size */}
       <div className="text-center max-w-3xl mx-auto mb-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white tracking-tight leading-tight">
           {KAIRO_SPEC.nodeCatalog.sectionTitle}
         </h2>
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6">
-        {/* Category Tabs */}
-        <div className="flex items-center gap-1 p-1 rounded-xl bg-[#18181c] border border-white/10 overflow-x-auto max-w-full">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-8">
+        {/* Category Tabs with White Active Selector */}
+        <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#18181c] border border-white/10 overflow-x-auto max-w-full">
           {[
             { id: 'all', label: 'All Nodes' },
             { id: 'triggers', label: 'Triggers' },
@@ -79,9 +79,9 @@ export default function NodeCatalogSection() {
               key={tab.id}
               type="button"
               onClick={() => setActiveCategory(tab.id)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 activeCategory === tab.id
-                  ? 'bg-blue-600 text-white shadow-sm'
+                  ? 'bg-white text-zinc-950 font-bold shadow-sm'
                   : 'text-zinc-400 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -103,15 +103,15 @@ export default function NodeCatalogSection() {
         </div>
       </div>
 
-      {/* Nodes Compact Grid with dark gray icons without background */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+      {/* Seamless Continuous Cross-Section Grid without gaps and without hashes */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10 bg-[#18181c] rounded-none">
         {filteredNodes.map(node => {
           const IconComp = iconMap[node.icon] || Sparkles;
 
           return (
             <div
               key={node.type}
-              className="p-4 sm:p-5 rounded-2xl border border-white/10 bg-[#18181c] hover:border-white/20 transition-all flex flex-col justify-between"
+              className="relative p-5 sm:p-6 border-r border-b border-white/10 hover:bg-[#202026] transition-colors flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
