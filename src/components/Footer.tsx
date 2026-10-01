@@ -49,7 +49,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
                 className="text-white hover:text-zinc-300 transition-colors p-1 inline-flex items-center gap-2"
                 aria-label="GitHub Repository"
               >
-                <Github className="w-4 h-4 text-white/40" />
+                <Github className="w-4 h-4 text-white/40 hover:text-white"/>
               </a>
             </div>
           </div>

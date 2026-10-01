@@ -55,13 +55,10 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
             }}
             className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
           >
-            <div className="flex items-center gap-2">
-              <img src="/Kairo.png" alt="Kairo" className="h-6 w-auto object-contain brightness-0 invert" />
-              
-              <span className="text-[8px] font-mono font-medium px-1.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-400">
-                {KAIRO_SPEC.navigation.logo.badge}
-              </span>
-            </div>
+            <img src="/Kairo.png" alt="Kairo" className="h-6 w-auto object-contain brightness-0 invert" />
+            <span className="text-xs font-mono font-medium px-1.5 py-0.5 text-zinc-400 select-none mt-2.5">
+              {KAIRO_SPEC.navigation.logo.badge}
+            </span>
           </a>
 
           {/* Desktop Links */}
@@ -71,7 +68,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-lg hover:bg-white/5 transition-all focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
+                className="px-3 py-1.5 text-xs font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/5 transition-all focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
               >
                 {item.label}
               </a>
