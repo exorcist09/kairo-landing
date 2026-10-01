@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  Sparkles,
+  Bot,
   ArrowRight,
   Play,
   CheckCircle2,
@@ -33,7 +33,7 @@ export default function HeroSection() {
       status: "Analyzed",
       cost: "3 credits",
       latency: "184ms",
-      icon: Sparkles,
+      icon: Bot,
       color: "border-cyan-500/40 text-cyan-400 bg-cyan-500/10",
     },
     {
@@ -77,11 +77,11 @@ export default function HeroSection() {
       </h1>
 
       {/* CTA Group */}
-      <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-md mx-auto mb-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-md mx-auto mb-4 gap-2 ">
         <a
           id="hero-primary-cta"
           href={AUTH_URLS.signUp}
-          className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 px-6 py-3  bg-[#18181c] hover:bg-[#202026] border border-white/10 hover:border-zinc-500 text-white font-semibold text-sm transition-all duration-300 active:scale-[0.98]"
+          className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 px-6 py-3  bg-[#18181c] hover:bg-[#202026] border border-white/10 hover:border-zinc-500 text-white font-semibold text-sm transition-all duration-300 active:scale-[0.98] rounded-sm"
         >
           <span>{KAIRO_SPEC.heroSection.ctaGroup.primary.text}</span>
           <ArrowRight className="w-4 h-4 text-zinc-400 group-hover:text-white transition-all group-hover:translate-x-1" />
@@ -95,7 +95,7 @@ export default function HeroSection() {
             const el = document.getElementById("editor");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#18181c] hover:bg-[#202026] border border-white/10 hover:border-zinc-500 text-zinc-200 font-semibold text-sm transition-all active:scale-[0.98]"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#18181c] hover:bg-[#202026] border border-white/10 hover:border-zinc-500 text-zinc-200 font-semibold text-sm transition-all active:scale-[0.98] rounded-sm"
         >
           <Play className="w-4 h-4 text-zinc-400 fill-zinc-400/20" />
           <span>{KAIRO_SPEC.heroSection.ctaGroup.secondary.text}</span>
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 <div key={node.id} className="relative flex flex-col items-center mt-17">
                   {/* Node Card */}
                   <div
-                    className={`w-full p-3.5 rounded-lg border transition-all duration-500 ${
+                    className={`w-full p-3.5 rounded-sm border transition-all duration-500 ${
                       isNodeActive
                         ? "border-zinc-400 bg-[#222226] scale-[1.02]"
                         : isNodePast

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
   CheckCircle2, 
   Bot, 
-  UserIcon
+  UserIcon,
+  MessageSquare,
+  Coins,
+  Layers
 } from 'lucide-react';
 import { KAIRO_SPEC } from '../data/kairoSpec';
 
@@ -124,22 +126,25 @@ export default function KaiAssistantSection() {
 
       {/* Assistant Capabilities Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {KAIRO_SPEC.kaiAssistantSpotlight.assistantCapabilities.map((cap, idx) => (
-          <div
-            key={idx}
-            className="rounded-lg border border-white/10 bg-[#18181c] hover:border-white/20 transition-all p-6 h-full flex flex-col justify-between group"
-          >
-            <div>
-              <Sparkles className="w-5 h-5 text-zinc-400 mb-4" />
-              <h4 className="text-base font-bold text-white tracking-tight mb-2">
-                {cap.title}
-              </h4>
-              <p className="text-xs text-zinc-400 leading-relaxed font-normal">
-                {cap.description}
-              </p>
+        {KAIRO_SPEC.kaiAssistantSpotlight.assistantCapabilities.map((cap, idx) => {
+          const CapIcon = [MessageSquare, Coins, Layers][idx % 3];
+          return (
+            <div
+              key={idx}
+              className="border border-white/10 bg-[#18181c] hover:border-white/20 transition-all p-6 h-full flex flex-col justify-between group"
+            >
+              <div>
+                <CapIcon className="w-5 h-5 text-zinc-400 mb-4" />
+                <h4 className="text-base font-bold text-white tracking-tight mb-2">
+                  {cap.title}
+                </h4>
+                <p className="text-xs text-zinc-400 leading-relaxed font-normal">
+                  {cap.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

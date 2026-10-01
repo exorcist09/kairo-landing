@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Zap, CheckCircle2 } from 'lucide-react';
 import { AUTH_URLS } from '../data/kairoSpec';
 
 export default function CtaBanner() {
@@ -15,7 +15,7 @@ export default function CtaBanner() {
 
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono font-semibold">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Zap className="w-3.5 h-3.5" />
               <span>START IN UNDER 60 SECONDS</span>
             </div>
 

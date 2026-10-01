@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Info, Sparkles } from 'lucide-react';
+import { Check, Info, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PricingPlan } from '../types';
 
@@ -98,7 +98,7 @@ export default function Pricing() {
       {/* Header and Toggle */}
       <div className="text-center relative z-10 max-w-2xl mx-auto space-y-4 mb-16">
         <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-950/40 border border-indigo-900/30 rounded-full text-xs font-mono font-bold text-indigo-400">
-          <Sparkles className="w-3.5 h-3.5" />
+          <Zap className="w-3.5 h-3.5" />
           PRICING PLANS
         </div>
         <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-display">

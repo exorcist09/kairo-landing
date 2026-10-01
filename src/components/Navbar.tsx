@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { KAIRO_SPEC, AUTH_URLS } from '../data/kairoSpec';
 
 interface NavbarProps {
@@ -39,7 +39,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
     <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
       <nav
         aria-label="Main Navigation"
-        className={`pointer-events-auto w-full max-w-[1440px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-2xl rounded-t-none border-x border-b border-t-0 ${
+        className={`pointer-events-auto w-full max-w-[1440px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-lg rounded-t-none border-x border-b border-t-0 ${
           isScrolled
             ? 'bg-[#18181c]/90 backdrop-blur-xl border-white/10 shadow-[0_12px_24px_-10px_rgba(0,0,0,0.5)] py-2.5 px-4 sm:px-8'
             : 'bg-[#18181c]/75 backdrop-blur-md border-white/10 py-3 px-4 sm:px-10'

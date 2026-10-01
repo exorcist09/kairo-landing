@@ -37,7 +37,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
               <img src="/Kairo.png" alt="Kairo" className="h-7 w-auto object-contain brightness-0 invert" />
             </a>
 
-            <p className="text-xs text-white leading-relaxed max-w-sm">
+            <p className="text-xs text-white/40 leading-relaxed max-w-sm">
               {KAIRO_SPEC.footer.tagline} Build, schedule, and orchestrate mission-critical background jobs with visual node graphs or Kai natural language prompts.
             </p>
 
@@ -49,7 +49,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
                 className="text-white hover:text-zinc-300 transition-colors p-1 inline-flex items-center gap-2"
                 aria-label="GitHub Repository"
               >
-                <Github className="w-4 h-4 text-white" />
+                <Github className="w-4 h-4 text-white/40" />
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
                   <a
                     href={item.href}
                     onClick={(e) => handleLinkClick(e, item.href)}
-                    className="text-xs text-white hover:text-zinc-300 transition-colors"
+                    className="text-xs text-white/40 hover:text-zinc-300 transition-colors"
                   >
                     {item.label}
                   </a>
@@ -88,7 +88,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
                       e.preventDefault();
                       alert(`${item.label}: All credentials in Kairo are isolated with AES-256 GCM encryption and tenant isolation.`);
                     }}
-                    className="text-xs text-white hover:text-zinc-300 transition-colors"
+                    className="text-xs text-white/40 hover:text-zinc-300 transition-colors"
                   >
                     {item.label}
                   </a>
@@ -99,7 +99,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
         </div>
 
         {/* Bottom copyright line with white text */}
-        <div className="flex items-center justify-start pt-6 gap-3 text-xs font-mono text-white text-right">
+        <div className="flex items-center justify-start pt-6 gap-3 text-xs font-mono text-white/40 text-right">
           <span>{KAIRO_SPEC.footer.copyright}</span>
         </div>
       </div>

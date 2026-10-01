@@ -355,7 +355,7 @@ export const KAIRO_SPEC = {
               "Execute text generation, complex structured data extraction, classification, and cognitive reasoning.",
             cost: 3,
             costUnit: "credits",
-            icon: "Sparkles",
+            icon: "Bot",
             tag: "Advanced AI",
           },
           {
@@ -739,7 +739,6 @@ export const KAIRO_SPEC = {
         { label: "Kai AI", href: "#kai-ai" },
         { label: "Integrations", href: "#integrations" },
         { label: "Pricing", href: "#pricing" },
-        { label: "Documentation", href: "#docs" },
       ],
       resources: [
         { label: "API Reference", href: "#api" },

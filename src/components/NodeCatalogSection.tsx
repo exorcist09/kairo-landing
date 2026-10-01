@@ -5,7 +5,7 @@ import {
   Network, 
   Webhook, 
   PlayCircle, 
-  Sparkles, 
+  Bot, 
   Brain, 
   Database, 
   Mail, 
@@ -26,7 +26,7 @@ export default function NodeCatalogSection() {
     Network,
     Webhook,
     PlayCircle,
-    Sparkles,
+    Bot,
     Brain,
     Database,
     Mail,
@@ -66,9 +66,9 @@ export default function NodeCatalogSection() {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-8">
-        {/* Category Tabs with White Active Selector */}
-        <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#18181c] border border-white/10 overflow-x-auto max-w-full">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        {/* Category Tabs with border right and left only */}
+        <div className="flex items-center border-l border-r border-white/20 divide-x divide-white/10 overflow-x-auto max-w-full">
           {[
             { id: 'all', label: 'All Nodes' },
             { id: 'triggers', label: 'Triggers' },
@@ -79,10 +79,10 @@ export default function NodeCatalogSection() {
               key={tab.id}
               type="button"
               onClick={() => setActiveCategory(tab.id)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+              className={`px-4 py-2 text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 activeCategory === tab.id
-                  ? 'bg-white text-zinc-950 font-bold shadow-sm'
-                  : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                  ? 'text-white font-bold'
+                  : 'text-zinc-600 hover:text-white hover:bg-white/5'
               }`}
             >
               {tab.label}
@@ -90,7 +90,7 @@ export default function NodeCatalogSection() {
           ))}
         </div>
 
-        {/* Search Input */}
+        {/* Search Input without border */}
         <div className="relative w-full sm:w-64">
           <Search className="w-3.5 h-3.5 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
@@ -98,7 +98,7 @@ export default function NodeCatalogSection() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search nodes..."
-            className="w-full bg-[#18181c] border border-white/10 rounded-xl pl-8 pr-3 py-1.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400 font-mono"
+            className="w-full border-b border-zinc-600 pl-8 pr-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none font-mono"
           />
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function NodeCatalogSection() {
       {/* Seamless Continuous Cross-Section Grid without gaps and without hashes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10 bg-[#18181c] rounded-none">
         {filteredNodes.map(node => {
-          const IconComp = iconMap[node.icon] || Sparkles;
+          const IconComp = iconMap[node.icon] || Bot;
 
           return (
             <div
