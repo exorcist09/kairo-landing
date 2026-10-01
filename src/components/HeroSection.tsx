@@ -71,28 +71,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative pt-44 pb-28 sm:pt-52 sm:pb-36 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center mt-20">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[500px] glow-blue-radial pointer-events-none -z-10" />
-
-      {/* Main Headline */}
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white max-w-4xl leading-[1.08] mb-6">
-        Build Complex Workflows with{" "}
-        <span className="text-3xl sm:text-5xl lg:text-6xl bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300 bg-clip-text text-transparent">
-          Visual Precision & AI
-        </span>
+      {/* Main Headline without gradient */}
+      <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white max-w-4xl leading-[1.08] mb-8">
+        Build Complex Workflows with Visual Precision & AI
       </h1>
 
-      {/* Reduced Subheading */}
-      <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
-        Build, schedule, and orchestrate mission-critical background jobs with an intuitive visual canvas or autonomous AI prompts.
-      </p>
-
       {/* CTA Group */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mx-auto mb-4 mt-6">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mx-auto mb-4">
         <a
           id="hero-primary-cta"
           href={AUTH_URLS.signUp}
-          className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 pl-6 pr-2 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_-5px_rgba(37,99,235,0.6)] hover:shadow-[0_0_35px_-2px_rgba(37,99,235,0.8)] transition-all duration-300 active:scale-[0.98]"
+          className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 pl-6 pr-2 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all duration-300 active:scale-[0.98]"
         >
           <span>{KAIRO_SPEC.heroSection.ctaGroup.primary.text}</span>
           <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
@@ -108,14 +97,14 @@ export default function HeroSection() {
             const el = document.getElementById("editor");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/70 hover:border-slate-600 text-slate-200 font-semibold text-sm transition-all active:scale-[0.98]"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#18181c] hover:bg-[#222226] border border-white/10 hover:border-white/20 text-zinc-200 font-semibold text-sm transition-all active:scale-[0.98]"
         >
-          <Play className="w-4 h-4 text-blue-400 fill-blue-400/20" />
+          <Play className="w-4 h-4 text-zinc-400 fill-zinc-400/20" />
           <span>{KAIRO_SPEC.heroSection.ctaGroup.secondary.text}</span>
         </a>
       </div>
 
-      <p className="text-xs text-slate-500 font-mono mb-4">
+      <p className="text-xs text-zinc-500 font-mono mb-4">
         {KAIRO_SPEC.heroSection.ctaGroup.primary.note}
       </p>
 
@@ -135,17 +124,15 @@ export default function HeroSection() {
                   <div
                     className={`w-full p-3.5 rounded-xl border transition-all duration-500 ${
                       isNodeActive
-                        ? "border-blue-400 bg-blue-950/40 shadow-[0_0_24px_rgba(37,99,235,0.35)] scale-[1.03]"
+                        ? "border-zinc-400 bg-[#222226] scale-[1.02]"
                         : isNodePast
-                        ? "border-white/10 bg-slate-900/60 shadow-sm"
-                        : "border-white/5 bg-slate-900/30 opacity-70"
+                        ? "border-white/10 bg-[#18181c]"
+                        : "border-white/5 bg-[#18181c]/70 opacity-70"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span>
-                       
-                      </span>
-                      <span className="text-[10px] font-mono text-slate-400">
+                      <span />
+                      <span className="text-[10px] font-mono text-zinc-400">
                         {node.cost}
                       </span>
                     </div>
@@ -153,7 +140,7 @@ export default function HeroSection() {
                     <div className="flex items-center gap-2 mb-1">
                       <IconComponent
                         className={`w-3.5 h-3.5 ${
-                          isNodeActive ? "text-cyan-400 animate-pulse" : "text-blue-400"
+                          isNodeActive ? "text-zinc-200" : "text-zinc-400"
                         }`}
                       />
                       <h4 className="text-xs font-bold text-white truncate font-sans">
@@ -161,7 +148,7 @@ export default function HeroSection() {
                       </h4>
                     </div>
 
-                    <p className="text-[11px] text-slate-400 mb-2.5 truncate font-mono">
+                    <p className="text-[11px] text-zinc-400 mb-2.5 truncate font-mono">
                       {node.desc}
                     </p>
 
@@ -170,7 +157,7 @@ export default function HeroSection() {
                         <CheckCircle2 className="w-3 h-3" />
                         {node.status}
                       </span>
-                      <span className="text-slate-400">{node.latency}</span>
+                      <span className="text-zinc-400">{node.latency}</span>
                     </div>
                   </div>
 
@@ -180,8 +167,8 @@ export default function HeroSection() {
                       <div
                         className={`w-4 h-0.5 transition-all duration-300 ${
                           isNodeActive || isNodePast
-                            ? "bg-blue-400 shadow-[0_0_8px_#38bdf8]"
-                            : "bg-slate-800"
+                            ? "bg-zinc-400"
+                            : "bg-zinc-800"
                         }`}
                       />
                     </div>

@@ -55,8 +55,7 @@ export default function DocsPage({ onClose }: DocsPageProps) {
     <div id="docs-page-viewport" className="fixed inset-0 z-50 bg-[#09090b] text-zinc-100 overflow-y-auto selection:bg-indigo-500/30">
       {/* Absolute grid and glowing accents */}
       <div className="absolute top-0 inset-x-0 h-[350px] bg-grid-pattern opacity-40 pointer-events-none z-0" />
-      <div className="absolute top-0 left-10 w-[250px] h-[250px] bg-indigo-600/10 rounded-full glow-blur pointer-events-none z-0" />
-      <div className="absolute top-0 right-10 w-[200px] h-[200px] bg-cyan-600/5 rounded-full glow-blur pointer-events-none z-0" />
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         

@@ -7,48 +7,41 @@ export default function HowItWorksSection() {
 
   return (
     <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative">
-      {/* Background glow */}
-      <div className="absolute top-1/2 right-1/4 w-[450px] h-[450px] glow-blue-radial pointer-events-none -z-10" />
-
-      {/* Header */}
+      {/* Header without subheading */}
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
           How Kairo Powers Autonomous Pipelines
         </h2>
-        <p className="text-slate-400 text-sm sm:text-base mt-4 font-normal max-w-2xl mx-auto">
-          From first spark of an idea to high-frequency production executions in four straightforward steps.
-        </p>
       </div>
 
-      {/* 4 Steps Grid */}
+      {/* 4 Steps Grid with corrected clean cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
         {KAIRO_SPEC.howItWorks.map((step, idx) => {
           const Icon = stepIcons[idx % stepIcons.length];
           return (
-            <div key={step.step} className="double-bezel-outer group hover:border-blue-500/30 transition-all duration-300">
-              <div className="double-bezel-inner p-6 sm:p-7 flex flex-col justify-between h-full">
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl font-extrabold text-blue-500/80 group-hover:text-blue-400 transition-colors">
-                      {step.step}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-2 tracking-tight">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    {step.description}
-                  </p>
+            <div
+              key={step.step}
+              className="rounded-2xl border border-white/10 bg-[#18181c] p-6 sm:p-7 flex flex-col justify-between h-full hover:border-white/20 transition-all duration-300 group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-2xl font-extrabold text-zinc-500 group-hover:text-zinc-300 transition-colors">
+                    {step.step}
+                  </span>
+                  <Icon className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-500">
-                  <span>Step {idx + 1} of 4</span>
-                  {idx < 3 && <ArrowRight className="w-3.5 h-3.5 text-blue-400/60" />}
-                </div>
+                <h3 className="text-lg font-bold text-white mb-2 tracking-tight">
+                  {step.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
+                  {step.description}
+                </p>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-zinc-500">
+                <span>Step {idx + 1} of 4</span>
+                {idx < 3 && <ArrowRight className="w-3.5 h-3.5 text-zinc-400" />}
               </div>
             </div>
           );

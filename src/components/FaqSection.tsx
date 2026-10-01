@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { KAIRO_SPEC } from '../data/kairoSpec';
 
 export default function FaqSection() {
@@ -10,57 +10,57 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-4xl mx-auto relative">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-slate-400 text-xs sm:text-sm mt-3 font-normal">
-          Clear answers about architecture, security, credits, and execution guarantees.
-        </p>
-      </div>
+    <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        {/* Left Column: Heading without subheading */}
+        <div className="lg:col-span-4 lg:sticky lg:top-28">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
 
-      {/* Accordion List */}
-      <div className="space-y-3">
-        {KAIRO_SPEC.faq.map((item, idx) => {
-          const isOpen = openIndex === idx;
+        {/* Right Column: Questions Accordion with only upper border & smooth animation */}
+        <div className="lg:col-span-8 border-b border-white/10">
+          {KAIRO_SPEC.faq.map((item, idx) => {
+            const isOpen = openIndex === idx;
 
-          return (
-            <div
-              key={idx}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                isOpen
-                  ? 'border-blue-500/40 bg-[#0d1322] shadow-[0_0_20px_rgba(37,99,235,0.15)]'
-                  : 'border-white/8 bg-[#0a0f1d] hover:border-white/15'
-              }`}
-            >
-              <button
-                type="button"
-                onClick={() => toggleAccordion(idx)}
-                className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
-                aria-expanded={isOpen}
+            return (
+              <div
+                key={idx}
+                className="border-t border-white/10 transition-colors"
               >
-                <span className="font-bold text-sm sm:text-base text-white tracking-tight">
-                  {item.question}
-                </span>
+                <button
+                  type="button"
+                  onClick={() => toggleAccordion(idx)}
+                  className="w-full text-left py-5 sm:py-6 flex items-center justify-between gap-4 focus:outline-none cursor-pointer group"
+                  aria-expanded={isOpen}
+                >
+                  <span className="font-semibold text-base sm:text-lg text-white group-hover:text-zinc-200 transition-colors tracking-tight">
+                    {item.question}
+                  </span>
+                  <Plus
+                    className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300 ease-out group-hover:text-white ${
+                      isOpen ? 'rotate-45 text-white' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Smooth CSS Grid Row expansion */}
                 <div
-                  className={`w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 transition-colors ${
-                    isOpen ? 'bg-blue-600/20 border-blue-500/30 text-blue-400' : 'text-slate-400'
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
-                  {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  <div className="overflow-hidden">
+                    <p className="pb-6 text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                      {item.answer}
+                    </p>
+                  </div>
                 </div>
-              </button>
-
-              {isOpen && (
-                <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 animate-in fade-in duration-200">
-                  {item.answer}
-                </div>
-              )}
-            </div>
-          );
-        })}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

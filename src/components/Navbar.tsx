@@ -39,10 +39,10 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
     <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
       <nav
         aria-label="Main Navigation"
-        className={`pointer-events-auto w-full max-w-6xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-2xl rounded-t-none border-x border-b border-t-0 ${
+        className={`pointer-events-auto w-full max-w-7xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-2xl rounded-t-none border-x border-b border-t-0 ${
           isScrolled
-            ? 'bg-[#0b0f19]/90 backdrop-blur-xl border-white/10 shadow-[0_16px_32px_-10px_rgba(0,0,0,0.8)] py-2.5 px-4 sm:px-5'
-            : 'bg-[#0f172a]/70 backdrop-blur-md border-white/8 py-3 px-4 sm:px-6'
+            ? 'bg-[#18181c]/90 backdrop-blur-xl border-white/10 shadow-[0_12px_24px_-10px_rgba(0,0,0,0.5)] py-2.5 px-4 sm:px-7'
+            : 'bg-[#18181c]/75 backdrop-blur-md border-white/10 py-3 px-4 sm:px-8'
         }`}
       >
         <div className="flex items-center justify-between">
@@ -53,13 +53,11 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
+            className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
           >
             <div className="flex items-center gap-2">
-              <span className="font-display font-extrabold text-lg tracking-tight text-white group-hover:text-blue-200 transition-colors">
-                {KAIRO_SPEC.navigation.logo.text}
-              </span>
-              <span className="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400">
+              <img src="/Kairo.png" alt="Kairo" className="h-6 w-auto object-contain" />
+              <span className="text-[8px] font-mono font-medium px-1.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-400">
                 {KAIRO_SPEC.navigation.logo.badge}
               </span>
             </div>
@@ -91,7 +89,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
             <a
               id="nav-start-free-btn"
               href={AUTH_URLS.signUp}
-              className="group relative inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-[0_0_20px_-3px_rgba(37,99,235,0.5)] hover:shadow-[0_0_25px_-1px_rgba(37,99,235,0.7)] transition-all duration-300 active:scale-[0.98]"
+              className="group relative inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold transition-all duration-300 active:scale-[0.98]"
             >
               <span>Start Free</span>
               <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">

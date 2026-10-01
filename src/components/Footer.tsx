@@ -21,10 +21,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
   };
 
   return (
-    <footer className="border-t border-white/8 bg-[#070b14] relative pt-16 pb-24 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] glow-blue-radial pointer-events-none -z-10" />
-
+    <footer className="border-t border-white/10 bg-[#0e0e10] relative pt-16 pb-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-white/8">
           {/* Logo & Tagline */}
@@ -37,9 +34,7 @@ export default function Footer({ onOpenDocs }: FooterProps) {
               }}
               className="flex items-center gap-2 group focus:outline-none"
             >
-              <span className="font-display font-extrabold text-lg tracking-tight text-white">
-                {KAIRO_SPEC.navigation.logo.text}
-              </span>
+              <img src="/Kairo.png" alt="Kairo" className="h-7 w-auto object-contain" />
             </a>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
