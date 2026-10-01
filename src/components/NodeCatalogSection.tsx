@@ -79,10 +79,10 @@ export default function NodeCatalogSection() {
               key={tab.id}
               type="button"
               onClick={() => setActiveCategory(tab.id)}
-              className={`px-4 py-2 text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+              className={`px-5 py-2 text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 activeCategory === tab.id
-                  ? 'text-white font-bold'
-                  : 'text-zinc-600 hover:text-white hover:bg-white/5'
+                  ? 'text-white font-bold bg-white/10'
+                  : 'text-zinc-500 hover:text-white hover:bg-white/5'
               }`}
             >
               {tab.label}

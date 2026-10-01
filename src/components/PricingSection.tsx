@@ -39,7 +39,7 @@ export default function PricingSection() {
 
         <a
           href={AUTH_URLS.signUp}
-          className="group inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-200 transition-all whitespace-nowrap active:scale-[0.98]"
+          className="group inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-200 transition-all whitespace-nowrap active:scale-[0.98]"
         >
           <span>{freePlan.ctaText}</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -102,7 +102,7 @@ export default function PricingSection() {
 
             <a
               href={AUTH_URLS.signUp}
-              className={`w-full group flex items-center justify-center gap-2 py-2.5 font-semibold text-xs transition-all active:scale-[0.98] ${
+              className={`w-full group flex items-center justify-center gap-2 py-2.5 rounded-lg font-semibold text-xs transition-all active:scale-[0.98] ${
                 plan.popular
                   ? 'bg-blue-600 hover:bg-blue-500 text-white'
                   : 'bg-zinc-800 hover:bg-zinc-700 text-white'
@@ -161,7 +161,7 @@ export default function PricingSection() {
             </p>
             <a
               href={AUTH_URLS.signUp}
-              className="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all active:scale-[0.98]"
+              className="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all active:scale-[0.98]"
             >
               <span>Buy Credits</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
