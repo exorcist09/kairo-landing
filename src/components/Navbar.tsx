@@ -36,16 +36,16 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
+    <header className="fixed top-0 inset-x-0 z-50 w-full pointer-events-none">
       <nav
         aria-label="Main Navigation"
-        className={`pointer-events-auto w-full max-w-[1440px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-b-lg rounded-t-none border-x border-b border-t-0 ${
+        className={`pointer-events-auto w-full transition-all duration-300 border-b ${
           isScrolled
-            ? 'bg-[#18181c]/90 backdrop-blur-xl border-white/10 shadow-[0_12px_24px_-10px_rgba(0,0,0,0.5)] py-2.5 px-4 sm:px-8'
-            : 'bg-[#18181c]/75 backdrop-blur-md border-white/10 py-3 px-4 sm:px-10'
+            ? 'bg-[#18181c]/90 backdrop-blur-xl border-white/10 shadow-[0_12px_24px_-10px_rgba(0,0,0,0.5)] py-2.5 px-4 sm:px-8 lg:px-12'
+            : 'bg-[#18181c]/75 backdrop-blur-md border-white/10 py-3 px-4 sm:px-8 lg:px-12'
         }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="w-full flex items-center justify-between">
           {/* Logo & Version Badge */}
           <a
             href="#"
@@ -57,6 +57,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
           >
             <div className="flex items-center gap-2">
               <img src="/Kairo.png" alt="Kairo" className="h-6 w-auto object-contain brightness-0 invert" />
+              
               <span className="text-[8px] font-mono font-medium px-1.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-400">
                 {KAIRO_SPEC.navigation.logo.badge}
               </span>
@@ -70,7 +71,7 @@ export default function Navbar({ onOpenDocs }: NavbarProps) {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
+                className="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-lg hover:bg-white/5 transition-all focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
               >
                 {item.label}
               </a>
