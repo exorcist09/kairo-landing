@@ -254,7 +254,7 @@ export default function InteractiveCanvas() {
   };
 
   return (
-    <div className="w-full rounded-xl border border-white/10 bg-[#18181c] overflow-hidden shadow-2xl text-zinc-200 font-sans select-none">
+    <div className="w-full rounded-lg border border-white/10 bg-[#18181c] overflow-hidden shadow-2xl text-zinc-200 font-sans select-none">
       {/* Top Header Bar */}
       <div className="h-14 px-4 bg-[#141416] border-b border-white/10 flex items-center justify-between">
         {/* Left spacer */}
@@ -477,15 +477,14 @@ export default function InteractiveCanvas() {
           <div className="absolute left-4 bottom-4 flex flex-col bg-[#18181c] border border-white/10 rounded-lg p-1 shadow-xl z-30">
             <button
               type="button"
-              onClick={() => setZoomLevel((z) => Math.min(z + 0.1, 1.4))}
+             
               className="p-1.5 text-zinc-400 hover:text-white hover:bg-white/5 rounded transition-colors"
               title="Zoom In"
             >
               <Plus className="w-3.5 h-3.5" />
             </button>
             <button
-              type="button"
-              onClick={() => setZoomLevel((z) => Math.max(z - 0.1, 0.7))}
+
               className="p-1.5 text-zinc-400 hover:text-white hover:bg-white/5 rounded transition-colors"
               title="Zoom Out"
             >
@@ -493,7 +492,6 @@ export default function InteractiveCanvas() {
             </button>
             <button
               type="button"
-              onClick={() => setZoomLevel(1)}
               className="p-1.5 text-zinc-400 hover:text-white hover:bg-white/5 rounded transition-colors"
               title="Fit View"
             >
@@ -501,7 +499,6 @@ export default function InteractiveCanvas() {
             </button>
             <button
               type="button"
-              onClick={() => setIsLocked(!isLocked)}
               className={`p-1.5 rounded transition-colors ${
                 isLocked ? "text-white bg-white/10" : "text-zinc-400 hover:text-white hover:bg-white/5"
               }`}

@@ -60,14 +60,14 @@ export default function CoreFeaturesSection() {
       {activeTab === "editor" ? (
         /* Interactive Canvas Editor Spotlight (anchored with #editor) */
         <div id="editor" className="mb-10 pt-2">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-4 gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-2 gap-3 mx-1.5">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5  bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-mono font-semibold mb-2">
                 <span>REACT FLOW POWERED</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 font-mono text-[11px] text-zinc-400 bg-[#18181c] border border-white/10 px-3 py-1.5 ">
+            <div className="flex items-center gap-2 font-mono text-[11px] text-zinc-400 bg-[#18181c] border border-white/10 px-2.5 py-0.5 ">
               <span>Interactive Drag-and-Drop Workflow Canvas</span>
             </div>
           </div>
@@ -78,14 +78,14 @@ export default function CoreFeaturesSection() {
       ) : (
         /* Video Walkthrough Showcase */
         <div id="video-demo" className="mb-10 pt-2">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-4 gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-2 gap-3 mx-1.5">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-mono font-semibold mb-2">
                 <span>PRODUCT WALKTHROUGH</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 font-mono text-[11px] text-zinc-400 bg-[#18181c] border border-white/10 px-3 py-1.5">
+            <div className="flex items-center gap-2 font-mono text-[11px] text-zinc-400 bg-[#18181c] border border-white/10 px-2.5 py-0.5">
               <span>90-Second Visual Automation Tour</span>
             </div>
           </div>

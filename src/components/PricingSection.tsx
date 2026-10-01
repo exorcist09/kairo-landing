@@ -126,7 +126,7 @@ export default function PricingSection() {
               Scale as You Grow (100 to 10,000 Credits)
             </h3>
             <p className="text-xs text-zinc-400 leading-relaxed font-normal">
-              Adjust credit capacity for high-volume database syncs, background AI reasoning loops, and multi-tenant pipelines. Volume discounted at ₹0.40 per credit.
+              Adjust credit capacity for high-volume database syncs, background AI reasoning loops, and multi-tenant pipelines.
             </p>
 
             {/* Slider Controller */}
